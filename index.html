@@ -11,28 +11,35 @@
       --accent: #58a6ff;
       --card: #161b22;
     }
+
     html, body {
       height: 100%;
       margin: 0;
     }
+    
     body {
-      background: url('https://files.grok.x.ai/grok-upload-0f9d8f2a-9e4f-4b2f-8c5a-2d8e3f1a9b7c') center center / cover no-repeat fixed;
+      min-height: 100vh;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: url('https://files.grok.x.ai/grok-upload-0f9d8f2a-9e4f-4b2f-8c5a-2d8e3f1a9b7c') center center / cover no-repeat fixed;
       color: var(--text);
       line-height: 1.6;
     }
+
     body::before {
       content: "";
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(13, 17, 23, 0.65); /* dark tint — adjust opacity if you want it lighter/darker */
+      inset: 0;
+      background: rgba(13, 17, 23, 0.75);
       z-index: -1;
     }
+
     .container {
       max-width: 800px;
       margin: 0 auto;
       padding: 4rem 2rem;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
     h1 {
       font-size: 3.5rem;
@@ -44,43 +51,4 @@
     p {
       font-size: 1.4rem;
       opacity: 0.9;
-      max-width: 600px;
-      margin: 1.5rem auto;
-    }
-    .links {
-      margin-top: 3rem;
-    }
-    .links a {
-      display: inline-block;
-      margin: 0 1rem;
-      padding: 0.8rem 1.8rem;
-      background: var(--card);
-      color: var(--accent);
-      text-decoration: none;
-      border-radius: 8px;
-      border: 1px solid #30363d;
-      font-weight: 600;
-      transition: all 0.2s;
-    }
-    .links a:hover {
-      background: #21262d;
-      transform: translateY(-3px);
-    }
-    footer {
-      margin-top: 6rem;
-      font-size: 0.9rem;
-      opacity: 0.6;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Nathan Stender</h1>
-    <p>Builder • Pretend Hacker • Generally Stupid</p>
-    
-    <footer>
-      © 2025 Nathan Stender • Hosted on GitHub Pages • Code by Grok, design stolen from the future
-    </footer>
-  </div>
-</body>
-</html>
+      max-width: 600px
